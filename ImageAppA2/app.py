@@ -18,7 +18,7 @@ DB_CONFIG = {
     'host': 'comp4349-db.c4ygpkkfjv3j.us-east-1.rds.amazonaws.com',
     'user': 'admin',
     'password': 'Bluelagoon9832#',
-    'database': 'comp4349db'
+    'database': 'comp4349-db'
 }
 
 # --- S3 Client ---

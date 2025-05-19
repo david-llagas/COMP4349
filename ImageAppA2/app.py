@@ -22,7 +22,11 @@ DB_CONFIG = {
 }
 
 # --- S3 Client ---
-s3 = boto3.client('s3', region_name=S3_REGION)
+from botocore import UNSIGNED
+from botocore.config import Config
+
+s3 = boto3.client('s3', region_name='us-east-1', config=Config(signature_version=UNSIGNED))
+
 
 # --- Routes ---
 

@@ -4,7 +4,7 @@
 DB_HOST="comp4349-db.c4ygpkkfjv3j.us-east-1.rds.amazonaws.com"
 DB_USER="admin"
 DB_PASS="Bluelagoon9832#"
-DB_NAME="comp4349-db"
+DB_NAME="comp4349db"
 
 # Create database
 echo "📦 Creating database (if not exists)..."

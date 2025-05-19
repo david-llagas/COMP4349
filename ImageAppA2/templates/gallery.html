@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}Gallery{% endblock %}
+{% block content %}
+<h2>Image Gallery</h2>
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% else %}
+    {% for image in images %}
+        <div style="margin-bottom: 20px;">
+            <a href="{{ image.original_url }}" target="_blank">
+                <img src="{{ image.url }}" alt="Thumbnail" style="max-width: 200px;">
+            </a>
+            <p><strong>Caption:</strong> {{ image.caption }}</p>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<br>
+<a href="/">Upload Another</a>
+
+{% endblock %}

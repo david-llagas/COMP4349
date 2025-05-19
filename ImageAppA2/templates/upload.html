@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Upload Result{% endblock %}
+{% block content %}
+<h2>Upload Result</h2>
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% else %}
+    <p><strong>S3 URL:</strong> <a href="{{ file_url }}" target="_blank">{{ file_url }}</a></p>
+    <p><em>Lambda will auto-generate caption and thumbnail shortly.</em></p>
+{% endif %}
+
+<br>
+<a href="/">Upload Another</a> | <a href="/gallery">View Gallery</a>
+{% endblock %}

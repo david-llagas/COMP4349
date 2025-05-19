@@ -7,12 +7,12 @@
     <p style="color: red;">{{ error }}</p>
 {% else %}
     {% for image in images %}
-        <div style="margin-bottom: 20px;">
-            <a href="{{ image.original_url }}" target="_blank">
-                <img src="{{ image.url }}" alt="Thumbnail" style="max-width: 200px;">
-            </a>
-            <p><strong>Caption:</strong> {{ image.caption }}</p>
-        </div>
+      <div style="margin-bottom: 30px;">
+        <a href="https://{{ bucket }}.s3.amazonaws.com/{{ image.s3_key }}" target="_blank">
+          <img src="https://{{ bucket }}.s3.amazonaws.com/thumbnails/{{ image.filename }}" width="150" />
+        </a>
+        <p><strong>Caption:</strong> {{ image.caption or 'None' }}</p>
+      </div>
     {% endfor %}
 {% endif %}
 
